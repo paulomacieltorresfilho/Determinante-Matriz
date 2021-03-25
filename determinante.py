@@ -34,18 +34,19 @@ def determinante(matriz):
 
 if __name__ == '__main__':
     from random import randint
+    from numpy import linalg
 
     def cria_linha(tamanho):
         return [randint(0,9) for _ in range(tamanho)]
 
-    matriz_exemplo10 = []
+    matriz_exemplo = []
     for i in range(10):
-        matriz_exemplo10.append(cria_linha(10))
+        matriz_exemplo.append(cria_linha(10))
 
     print("Matriz 10x10:")
     for i in range(10):
-        print(*matriz_exemplo10[i], sep='\t')
+        print(*matriz_exemplo[i], sep='\t')
 
-    print('resultado: ', determinante(matriz_exemplo10))
-    print('\npara garantir os resultados acesse:')
-    print('https://matrixcalc.org/pt/det.html')
+    print('resultado:', determinante(matriz_exemplo))
+    print('resultado com numpy:', linalg.det(matriz_exemplo))
+    
