@@ -1,3 +1,8 @@
+'''
+Criado por Paulo Maciel Torres Filho
+25/3/2021
+'''
+
 def descobreMatrizMenor(matriz, posicao_i, posicao_j):
     '''A menor de um elemento de uma matriz é a matriz que se 
 forma quando retiramos da matriz inicial a linha e coluna na
@@ -40,11 +45,11 @@ if __name__ == '__main__':
         return [randint(0,9) for _ in range(tamanho)]
 
     matriz_exemplo = []
-    for i in range(10):
-        matriz_exemplo.append(cria_linha(10))
+    for i in range(100):
+        matriz_exemplo.append(cria_linha(100))
 
-    print("Matriz 10x10:")
-    for i in range(10):
+    print("Matriz 100x100:")
+    for i in range(100):
         print(*matriz_exemplo[i], sep='\t')
 
     print('resultado:', determinante(matriz_exemplo))
